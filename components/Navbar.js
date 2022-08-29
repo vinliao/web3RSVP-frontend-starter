@@ -32,6 +32,11 @@ export default function Navbar() {
                   Create Event
                 </a>
               </Link>
+              {account ? (
+                <Navmenu account={account} disconnect={() => disconnect()} />
+              ) : (
+                <ConnectButton />
+              )}
             </div>
           </div>
         </nav>
